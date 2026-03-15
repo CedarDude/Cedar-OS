@@ -4,14 +4,14 @@
 #include "idt.h"
 
 void kernel_main() {
-    MK_delay(1450);
+    MK_delay(1050);
 
     // IT VGA_SET_COLOR not MK_VGA_SET_COLOR FUCKER.
     MK_vga_set_color(0x0E);
     MK_vga_print("KERNEL FOUND AND READ==================================\n");
     MK_vga_reset_color();
 
-    MK_delay(4000);
+    MK_delay(2000);
     MK_clear_screen();
     init_keyboard();
     init_idt();
@@ -24,17 +24,16 @@ void kernel_main() {
     MK_vga_print("'-----------------------------------------------------------------------------'\n");
     MK_delay(1000);
     MK_vga_print("============================CEDAROS_FALLBACK_DOS_MODE=========================\n\n");
-    MK_delay(1780);
+    MK_delay(170);
     MK_vga_print("init MK_idt_table... OK\n");
     MK_vga_print("init MK_vga_graphism... OK\n");
-    MK_delay(1245);
     MK_vga_print("init MK_keyboard_driver_sys... OK\n");
     MK_delay(1245);
     MK_vga_print("init MK_BOOT_FALLBACK_MODE_DOS_DEFAULT_CMP... OK\n");
     MK_vga_print("init MK_sysapp... OK\n");
     MK_delay(200);
     MK_vga_print("All systems are up and running, booting into fallback dos mode...\n");
-    MK_delay(2000);
+    MK_delay(200);
     
 
     MK_vga_print("dev note: back space still not added, if you used backspace on your command, it will fail.\n");
