@@ -25,13 +25,6 @@ void kernel_main() {
     MK_delay(1000);
     MK_vga_print("============================CEDAROS_FALLBACK_DOS_MODE=========================\n\n");
     MK_delay(170);
-    MK_vga_print("init MK_idt_table... OK\n");
-    MK_vga_print("init MK_vga_graphism... OK\n");
-    MK_vga_print("init MK_keyboard_driver_sys... OK\n");
-    MK_delay(1245);
-    MK_vga_print("init MK_BOOT_FALLBACK_MODE_DOS_DEFAULT_CMP... OK\n");
-    MK_vga_print("init MK_sysapp... OK\n");
-    MK_delay(200);
     MK_vga_print("All systems are up and running, booting into fallback dos mode...\n");
     MK_delay(200);
     
@@ -42,13 +35,9 @@ void kernel_main() {
     char line[MK_LINE_MAX];
     int idx = 0;
     line[0] = '\0';
-    // what the f*ck if this code management - omar
-    // i mean it work - jad
     while (1) {
         char c = read_key();
         if (c) {
-            // Do not let Esc return from kernel_main (causes system control fall-through).
-            // Keep running in command loop only.
             if (c == '\b') {
                 if (idx > 0) {
                     idx--;
@@ -74,6 +63,6 @@ void kernel_main() {
             }
         }
         MK_delay(50);
-        // delays for this f*cker.
+        // delays for this thing.
     }
 }
