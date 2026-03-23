@@ -1,8 +1,0 @@
-qemu-system-i386 -fda build/cedar.img -d int -D fresh_test.txt -M smm=off -no-reboot -no-shutdown
-simrun
-
-compile
-./build.sh
-
-
-... just dont read the comments...
