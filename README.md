@@ -5,13 +5,8 @@ A Lite, Free, Open Source Operating System, Made From Scratch.
 > This OS is in pre-release, it will improve over time.
 
 > [!WARNING]
-> This OS may be unstable in in real computers, try to run in qemu as we still did not try to run on real pc...
->
->
+> This OS may be unstable on real computers, try to run it in QEMU as we still did not try to run tests on real hardware.
 
-
-> [!WARNING]
-> Now you have to use boot.img and not cedar.img
 # How to compile?
 
 This is writen in x86 assembly and C and needs to be created specifically with **NASM**, by running:
